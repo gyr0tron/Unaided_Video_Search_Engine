@@ -15,18 +15,18 @@
 │   └───processing
 └───test
 ```
-- **data**
-  - **processed**
+- **`data`**
+  - **`processed`**:
   Storage for processed data ready to be used.
-  - **raw**
+  - **`raw`**:
   A local subset copy of retrieved data.
-- **model**
+- **`model`**:
 Storing intermediate results in here such as weights.
-- **notebook**
-- **src**
-  - **modelling**
+- **`notebook`**
+- **`src`**
+  - **`modelling`**:
   Not just model construction and training but also evaluation.
-  - **processing**
+  - **`processing`**:
   Data ingestion and data transformation.
-- **test**
+- **`test`**:
  Place to test out snippets.
