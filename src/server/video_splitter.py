@@ -14,6 +14,7 @@ import pandas as pd
 
 input_video_paths = list()
 input_video_names = list()
+input_vid_tmp = "../../data/raw/input.mp4"
 PROCESSED_PATH = '../../data/processed/'
 STATS_FILE_PATH = f'{PROCESSED_PATH}stats.csv'
 RAW_PATH = '../../data/raw/'
@@ -23,7 +24,11 @@ with os.scandir(RAW_PATH) as entries:
         input_video_paths.append(f'../../data/raw/{entry.name}')
 
 
-def main():
+def split_generate():
+    print("test1")
+    print("test1")
+    print("test1")
+    print("test1")
     video_manager = VideoManager(input_video_paths)
     stats_manager = StatsManager()
     scene_manager = SceneManager(stats_manager)
@@ -66,7 +71,7 @@ def main():
                 stats_manager.save_to_csv(stats_file, base_timecode)
 
         # split_video_mkvmerge(
-        #     input_video_paths[0], scene_list, output_file_prefix=f'{input_video_names[0]}', video_name=input_video_names[0], suppress_output=False)
+        #     input_video_paths, scene_list, output_file_prefix=f'{input_video_names[0]}', video_name='ayy.mp4', suppress_output=False)
 
         # split_video_ffmpeg(
         #     input_video_paths=input_video_paths[0], scene_list=scene_list, output_file_template=f'{input_video_names[0]}', video_name='vid', hide_progress=False, suppress_output=False)
@@ -81,4 +86,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    split_generate()

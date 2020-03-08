@@ -106,3 +106,5 @@ venv.bak/
 #data
 /data/processed/
 /data/raw/
+
+/data/.DS_STORE
