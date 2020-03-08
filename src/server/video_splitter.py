@@ -78,8 +78,8 @@ def split_generate():
         processed_images_path = f'{PROCESSED_PATH}images'
         processed_scenes_path = f'{PROCESSED_PATH}scenes'
 
-        os.system(
-            f'scenedetect --input {input_video_paths[0]} --output {PROCESSED_PATH} --stats {STATS_FILE_PATH} detect-content --min-scene-len 30 --threshold 27 list-scenes save-images --output {processed_images_path} --num-images 1 split-video --output {processed_scenes_path}')
+        # os.system(
+        #     f'scenedetect --input {input_video_paths[0]} --output {PROCESSED_PATH} --stats {STATS_FILE_PATH} detect-content --min-scene-len 30 --threshold 27 list-scenes save-images --output {processed_images_path} --num-images 1 split-video --output {processed_scenes_path}')
 
     finally:
         video_manager.release()
