@@ -108,3 +108,4 @@ venv.bak/
 /data/raw/
 
 /data/.DS_STORE
+/test/PySceneDetect
