@@ -104,8 +104,8 @@ venv.bak/
 .mypy_cache/
 
 #data
-/data/processed/
-/data/raw/
+/src/data/processed/
+/src/data/raw/
 
-/data/.DS_STORE
+/src/data/.DS_STORE
 /test/PySceneDetect

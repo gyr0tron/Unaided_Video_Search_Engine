@@ -8,5 +8,5 @@ services:
       - "5000:5000"
     volumes:
       - type: bind
-        source: data
-        target: /data
+        source: ./src/data
+        target: /app/data
