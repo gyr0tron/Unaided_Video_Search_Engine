@@ -109,3 +109,7 @@ venv.bak/
 
 /src/data/.DS_STORE
 /test/PySceneDetect
+
+#captioner
+/src/captioner/dataset
+/src/captioner/model_weights
