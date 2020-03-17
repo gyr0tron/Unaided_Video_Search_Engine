@@ -68,6 +68,28 @@ def search_page_return():
     return render_template("public/search-page.html")
 
 
+@app.route("/search", methods=["POST"])
+def search_sql():
+    search_query = request.form['search_query']
+
+    import mysql.connector
+    mydb = mysql.connector.connect(
+        host="localhost",
+        port="9306",
+        user="root",
+        passwd="",
+        database="UVSE"
+    )
+    mycursor = mydb.cursor()
+    sql_query = f"select * from captions where MATCH ('{search_query}')"
+    print(sql_query)
+    mycursor.execute(sql_query)
+    rows = mycursor.fetchall()
+    for row in rows:
+        for i in range(len(row)):
+            print(row[i])
+
+
 if __name__ == "__main__":
     # import sys
     app.run(host="0.0.0.0", debug=True, threaded=False)
