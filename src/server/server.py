@@ -71,23 +71,31 @@ def search_page_return():
 @app.route("/search", methods=["POST"])
 def search_sql():
     search_query = request.form['search_query']
-
+    result_list = list()
     import mysql.connector
     mydb = mysql.connector.connect(
         host="localhost",
-        port="9306",
         user="root",
         passwd="",
         database="UVSE"
     )
     mycursor = mydb.cursor()
-    sql_query = f"select * from captions where MATCH ('{search_query}')"
+
+    # SELECT * FROM articles
+    # WHERE MATCH(title, body)
+    # AGAINST('database' IN NATURAL LANGUAGE MODE)
+    # SELECT id, caption, MATCH(caption) AGAINST('man roof' IN NATURAL LANGUAGE MODE) AS score FROM captions ORDER BY `score`  DESC
+
+    # sql_query = f"select * from captions where MATCH ('{search_query}')"
+    sql_query = f"SELECT id, vid_name, img_name, caption, MATCH(caption) AGAINST('{search_query}' IN NATURAL LANGUAGE MODE) AS score FROM captions ORDER BY `score` DESC LIMIT 10"
     print(sql_query)
     mycursor.execute(sql_query)
     rows = mycursor.fetchall()
+    # print(type(rows))
     for row in rows:
-        for i in range(len(row)):
-            print(row[i])
+        result_list.append(list(row))
+    return render_template('public/results.html', rows=result_list)
+    # return Response(rows, mimetype='text/event-stream')
 
 
 if __name__ == "__main__":
