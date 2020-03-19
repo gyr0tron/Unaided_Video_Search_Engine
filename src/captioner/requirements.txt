@@ -1,0 +1,8 @@
+shelljob==0.5.6
+matplotlib==3.1.1
+celery==4.4.2
+pandas==0.25.1
+Keras==2.3.1
+numpy==1.17.1
+mysql_connector_repackaged==0.3.1
+Pillow==7.0.0

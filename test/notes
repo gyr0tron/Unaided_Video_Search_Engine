@@ -1,0 +1,17 @@
+mac cleanup
+cd src/data/processed/images && sudo rm -rf .DS_Store
+cd src/data/raw && sudo rm -rf .DS_Store
+
+beat
+celery -A script beat --loglevel=info
+
+worker
+celery -A script worker --loglevel=info
+
+server.py mysql changed to docker
+
+xampp
+phpmyadmin
+redis
+celery commands ready
+docker-compose up --build

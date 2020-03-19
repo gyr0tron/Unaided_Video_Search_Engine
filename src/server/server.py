@@ -74,7 +74,7 @@ def search_sql():
     result_list = list()
     import mysql.connector
     mydb = mysql.connector.connect(
-        host="localhost",
+        host="docker.for.mac.host.internal",
         user="root",
         passwd="",
         database="UVSE"

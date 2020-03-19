@@ -10,3 +10,17 @@ services:
       - type: bind
         source: ./src/data
         target: /app/data
+  # redis:
+  #   image: redis:latest
+  #   hostname: redis
+  # worker:
+  #   build:
+  #     context: ./src/captioner
+  #     dockerfile: Dockerfile
+  #   command: ./scripts/run_celery.sh
+  #   volumes:
+  #     - type: bind
+  #       source: ./src/data
+  #       target: /app/data
+  #   links:
+  #     - redis
