@@ -1,6 +1,6 @@
 <html>
   <body>
-    <table border="1">
+    <!-- <table border="1">
       <tbody>
         {% for row in rows %}
         <tr>
@@ -10,6 +10,21 @@
         </tr>
         {% endfor %}
       </tbody>
-    </table>
+    </table> -->
+    <ul>
+      {% for data in img_link_list %}
+      <li><img src="{{ data }}" height="150" /></li>
+      {% endfor %}
+    </ul>
+    <ul>
+      {% for data in vid_link_list %}
+      <li><a href="{{ data }}">Video</a></li>
+      {% endfor %}
+    </ul>
+    <ul>
+      {% for data in desc_list %}
+      <li>{{ data }}</li>
+      {% endfor %}
+    </ul>
   </body>
 </html>

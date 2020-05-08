@@ -1,17 +1,26 @@
 mac cleanup
 cd src/data/processed/images && sudo rm -rf .DS_Store
+cd src/data/processed/scenes && sudo rm -rf .DS_Store
 cd src/data/raw && sudo rm -rf .DS_Store
-
-beat
-celery -A script beat --loglevel=info
 
 worker
 celery -A script worker --loglevel=info
 
+beat
+celery -A script beat --loglevel=info
+
 server.py mysql changed to docker
 
+docker daemon
 xampp
 phpmyadmin
 redis
 celery commands ready
 docker-compose up --build
+
+ running a marathon
+ railroad
+ people in water
+ sitting with laptop
+ group of people
+ sitting at table

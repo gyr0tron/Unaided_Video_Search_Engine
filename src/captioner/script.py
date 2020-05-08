@@ -1,5 +1,6 @@
 from celery import Celery
 from celery.schedules import crontab
+import shutil
 app = Celery('script', broker="redis://localhost:6379/0")
 # disable UTC so that Celery can use local time
 app.conf.enable_utc = False
@@ -16,6 +17,8 @@ def scheduled_task():
     PROCESSED_PATH = '../data/processed/'
     STATS_FILE_PATH = f'stats.csv'
     RAW_PATH = '../data/raw/'
+    if os.path.exists(STATS_FILE_PATH):
+        os.remove(STATS_FILE_PATH)
 
     with os.scandir(RAW_PATH) as entries:
         for entry in entries:
@@ -33,6 +36,7 @@ def scheduled_task():
     # p = g.run(process_cli)
 
     os.system(process_cli)
+    shutil.move(input_video_paths[0], "../data/processed")
 
     from keras.utils import to_categorical
     from keras.preprocessing.sequence import pad_sequences
@@ -370,7 +374,8 @@ def scheduled_task():
     for location in images_paths:
         image_name = location[25:]
         print(image_name)
-        vid_name = image_name.replace("jpg", "mp4")
+        vid_name_temp = image_name[:-7]
+        vid_name = vid_name_temp + ".mp4"
         print(vid_name)
         img_caption = disp_caption(location)
         print(img_caption)
@@ -386,6 +391,6 @@ def scheduled_task():
 app.conf.beat_schedule = {
     "scheduled-task": {
         "task": "script.scheduled_task",
-        "schedule": crontab(minute="*/30")
+        "schedule": crontab(minute="*/2")
     }
 }
