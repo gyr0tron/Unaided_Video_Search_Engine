@@ -261,3 +261,217 @@ h1 > span {
   box-shadow: inset 0 0 0 50px rgb(247, 2, 2);
   color: rgba(0, 0, 0);
 }
+
+.webdesigntuts-workshop {
+  background: #151515;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.webdesigntuts-workshop:before,
+.webdesigntuts-workshop:after {
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  margin: 0 0 0 -500px;
+  position: absolute;
+  width: 1000px;
+}
+
+.webdesigntuts-workshop:before {
+  background: #fff;
+  background: linear-gradient(left, #151515, #444, #151515);
+  top: 192px;
+}
+
+.webdesigntuts-workshop:after {
+  background: #000;
+  background: linear-gradient(left, #151515, #000, #151515);
+  top: 191px;
+}
+
+.webdesigntuts-workshop form {
+  background: #111;
+  background: #00000000;
+  border: 1px solid #000;
+  box-shadow: inset 0 0 0 1px #fff;
+  display: inline-block;
+  font-size: 0px;
+  margin: 145px auto 0;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.webdesigntuts-workshop input {
+  background: #000;
+  /* background: linear-gradient(#333, #222); */
+  /* border: 1px solid #444; */
+  /* border-radius: 5px 0 0 5px; */
+  /* box-shadow: 0 2px 0 #000; */
+  color: #fff;
+  display: block;
+  float: left;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  height: 50px;
+  margin: 0;
+  padding: 0 10px;
+  /* text-shadow: 0 -1px 0 #000; */
+  width: 300px;
+}
+
+.ie .webdesigntuts-workshop input {
+  line-height: 40px;
+}
+
+.webdesigntuts-workshop input::-webkit-input-placeholder {
+  color: #888;
+}
+
+.webdesigntuts-workshop input:-moz-placeholder {
+  color: #888;
+}
+
+.webdesigntuts-workshop input:focus {
+  animation: glow 800ms ease-out infinite alternate;
+  background: #222922;
+  background: linear-gradient(#000000, #000000);
+  border-color: #781bf3;
+  box-shadow: 0 0 5px rgba(0, 55, 255, 0.3),
+    inset 0 0 5px rgba(180, 0, 255, 0.2), 0 2px 0 #000;
+  color: #efe;
+  outline: none;
+}
+
+.webdesigntuts-workshop input:focus::-webkit-input-placeholder {
+  color: #efe;
+}
+
+.webdesigntuts-workshop input:focus:-moz-placeholder {
+  color: #efe;
+}
+
+.webdesigntuts-workshop button {
+  background: #000;
+  /* background: linear-gradient(#333, #222); */
+  box-sizing: border-box;
+  /* border: 1px solid #444; */
+  border-left-color: #000;
+  /* border-radius: 0 5px 5px 0; */
+  /* box-shadow: 0 2px 0 #000; */
+  color: #fff;
+  display: block;
+  float: left;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  height: 50px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /* text-shadow: 0 -1px 0 #000; */
+  width: 80px;
+}
+
+.webdesigntuts-workshop button:hover,
+.webdesigntuts-workshop button:focus {
+  background: #000000;
+  /* background: linear-gradient(#393939, #292929); */
+  color: #ed55ff;
+  border-color: #ed55ff;
+  outline: none;
+}
+
+.webdesigntuts-workshop button:active {
+  background: #292929;
+  background: linear-gradient(#393939, #292929);
+  box-shadow: 0 1px 0 #000, inset 1px 0 1px #222;
+  top: 1px;
+}
+
+@keyframes glow {
+  0% {
+    border-color: rgba(204, 0, 255, 0.377);
+    box-shadow: 0 0 5px rgba(255, 0, 200, 0.2),
+      inset 0 0 5px rgba(0, 255, 0, 0.1), 0 2px 0 #000;
+  }
+  100% {
+    border-color: rgb(250, 102, 255);
+    box-shadow: 0 0 20px rgba(140, 0, 255, 0.6),
+      inset 0 0 10px rgba(255, 0, 234, 0.788), 0 2px 0 #000;
+  }
+}
+
+.rolldown-list {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.rolldown-list li {
+  padding: 1em;
+  margin-bottom: 0.125em;
+  color: #fff;
+  display: block;
+  list-style: none;
+  /* text-transform: uppercase; */
+}
+
+.rolldown-list li {
+  visibility: hidden;
+  animation: rolldown 0.7s 1;
+  transform-origin: 50% 0;
+  animation-fill-mode: forwards;
+}
+
+.rolldown-list li:nth-child(2n) {
+  background-color: #6767677a;
+}
+
+.rolldown-list li:nth-child(2n + 1) {
+  background-color: #3c3b3b73;
+}
+
+#myList {
+  position: absolute;
+  /* width: 50%; */
+  top: 10%;
+  left: 10%;
+  /* margin-left: 10%; */
+}
+
+@keyframes rolldown {
+  0% {
+    visibility: visible;
+    transform: rotateX(180deg) perspective(500px);
+  }
+  70% {
+    visibility: visible;
+    transform: rotateX(-20deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotateX(0deg);
+  }
+}
+
+.results-para {
+  text-transform: capitalize;
+  position: relative;
+  top: 60px;
+  left: 50px;
+  height: fit-content;
+}
+
+.results-vid-link {
+  position: absolute;
+  top: 75px;
+  right: 100px;
+  height: fit-content;
+}

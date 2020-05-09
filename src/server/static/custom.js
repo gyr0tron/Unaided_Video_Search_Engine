@@ -111,7 +111,7 @@ class PropsArray {
 
 ("use strict");
 
-const particleCount = 700;
+const particleCount = 500;
 const particlePropCount = 9;
 const particlePropsLength = particleCount * particlePropCount;
 const spawnRadius = rand(200) + 400;

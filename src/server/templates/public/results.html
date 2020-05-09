@@ -1,4 +1,12 @@
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="static/bootstrap.css" />
+    <link rel="stylesheet" href="static/styles.css" />
+  </head>
+
   <body>
     <!-- <table border="1">
       <tbody>
@@ -11,7 +19,7 @@
         {% endfor %}
       </tbody>
     </table> -->
-    <ul>
+    <!-- <ul>
       {% for data in img_link_list %}
       <li><img src="{{ data }}" height="150" /></li>
       {% endfor %}
@@ -25,6 +33,127 @@
       {% for data in desc_list %}
       <li>{{ data }}</li>
       {% endfor %}
-    </ul>
+    </ul> -->
+
+    <div class="title-wrapper">
+      <ul class="container rolldown-list" id="myList">
+        <li>
+          <div class="row">
+            <img
+              src="{{ img_link_list[0] }}"
+              height="150"
+              style="margin-left: 15px;"
+            />
+            <p class="results-para">{{ desc_list[0] }}</p>
+            <a class="results-vid-link" href="{{ vid_link_list[0] }}">Video</a>
+          </div>
+        </li>
+        <li>
+          <div class="row">
+            <img
+              src="{{ img_link_list[1] }}"
+              height="150"
+              style="margin-left: 15px;"
+            />
+            <p class="results-para">{{ desc_list[1] }}</p>
+            <a class="results-vid-link" href="{{ vid_link_list[1] }}">Video</a>
+          </div>
+        </li>
+        <li>
+          <div class="row">
+            <img
+              src="{{ img_link_list[2] }}"
+              height="150"
+              style="margin-left: 15px;"
+            />
+            <p class="results-para">{{ desc_list[2] }}</p>
+            <a class="results-vid-link" href="{{ vid_link_list[2] }}">Video</a>
+          </div>
+        </li>
+        <li>
+          <div class="row">
+            <img
+              src="{{ img_link_list[3] }}"
+              height="150"
+              style="margin-left: 15px;"
+            />
+            <p class="results-para">{{ desc_list[3] }}</p>
+            <a class="results-vid-link" href="{{ vid_link_list[3] }}">Video</a>
+          </div>
+        </li>
+        <li>
+          <div class="row">
+            <img
+              src="{{ img_link_list[4] }}"
+              height="150"
+              style="margin-left: 15px;"
+            />
+            <p class="results-para">{{ desc_list[4] }}</p>
+            <a class="results-vid-link" href="{{ vid_link_list[4] }}">Video</a>
+          </div>
+        </li>
+        <li>
+          <div class="row">
+            <img
+              src="{{ img_link_list[5] }}"
+              height="150"
+              style="margin-left: 15px;"
+            />
+            <p class="results-para">{{ desc_list[5] }}</p>
+            <a class="results-vid-link" href="{{ vid_link_list[5] }}">Video</a>
+          </div>
+        </li>
+        <li>
+          <div class="row">
+            <img
+              src="{{ img_link_list[6] }}"
+              height="150"
+              style="margin-left: 15px;"
+            />
+            <p class="results-para">{{ desc_list[6] }}</p>
+            <a class="results-vid-link" href="{{ vid_link_list[6] }}">Video</a>
+          </div>
+        </li>
+        <li>
+          <div class="row">
+            <img
+              src="{{ img_link_list[7] }}"
+              height="150"
+              style="margin-left: 15px;"
+            />
+            <p class="results-para">{{ desc_list[7] }}</p>
+            <a class="results-vid-link" href="{{ vid_link_list[7] }}">Video</a>
+          </div>
+        </li>
+        <li>
+          <div class="row">
+            <img
+              src="{{ img_link_list[8] }}"
+              height="150"
+              style="margin-left: 15px;"
+            />
+            <p class="results-para">{{ desc_list[8] }}</p>
+            <a class="results-vid-link" href="{{ vid_link_list[8] }}">Video</a>
+          </div>
+        </li>
+        <li>
+          <div class="row">
+            <img
+              src="{{ img_link_list[9] }}"
+              height="150"
+              style="margin-left: 15px;"
+            />
+            <p class="results-para">{{ desc_list[9] }}</p>
+            <a class="results-vid-link" href="{{ vid_link_list[9] }}">Video</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script src="static/jquery.min.js"></script>
+    <script src="static/bootstrap.js"></script>
+    <script src="static/scripts.js"></script>
+    <script src="static/simplex-noise.min.js"></script>
+    <script src="static/custom.js"></script>
+    <script src="static/results.js"></script>
   </body>
 </html>
