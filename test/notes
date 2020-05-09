@@ -2,7 +2,7 @@ mac cleanup
 cd src/data/processed/images && sudo rm -rf .DS_Store
 cd src/data/processed/scenes && sudo rm -rf .DS_Store
 cd src/data/raw && sudo rm -rf .DS_Store
-
+cd src/data/processed/images && sudo rm -rf * && cd ../../../../ && cd src/data/processed/scenes && sudo rm -rf * && cd ../../../../
 worker
 celery -A script worker --loglevel=info
 

@@ -8,6 +8,7 @@ from time import sleep
 from shelljob import proc
 import pandas as pd
 
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = '../data/raw'
 app.config['PROCED_VIDEO_PATH'] = '../data/processed/scenes'
@@ -149,12 +150,14 @@ def custom_static2(filename):
     # send_file("scenes/"+filename)
     # return send_from_directory(app.config['PROCED_VIDEO_PATH'], filename, mimetype="video/mp4")
     # def serve_video(vid_name):
-    vid_path = os.path.abspath(os.getcwd())[
-        :-6]+'data/processed/scenes/'+filename
-    resp = make_response(
-        send_file(vid_path, 'video/mp4'))
-    resp.headers['Content-Disposition'] = 'inline'
-    return resp
+    # vid_path = os.path.abspath(os.getcwd())[
+    #     :-6]+'data/processed/scenes/'+filename
+    # resp = make_response(
+    #     send_file(vid_path, 'video/mp4'))
+    # resp.headers['Content-Disposition'] = 'inline'
+    # return resp
+
+    return send_from_directory(app.config['PROCED_VIDEO_PATH'], filename)
 
 
 if __name__ == "__main__":
