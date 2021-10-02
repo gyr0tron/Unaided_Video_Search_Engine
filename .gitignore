@@ -113,3 +113,7 @@ venv.bak/
 #captioner
 /src/captioner/dataset
 /src/captioner/model_weights
+
+#Files
+/Unaided Video Search Engine (Published).pdf
+/Unaided Video Search Engine.mp4
