@@ -15,7 +15,6 @@
 
 <h2> 🎥 Demo Video</h2>
   <a href="https://drive.google.com/file/d/1t1KMUg89NzQJtyV-EBkbz41vYb5vNiZo/view?usp=sharing" target="_blank">
-    <img src="https://lh5.googleusercontent.com/wyrgc35Wz2KvAWL6129km5aMx10QwuZswLt6C0Jj6LDW5vyv9U2SdooVPNidD8plESV0AL93172f1cB0wT0j=w1440-h789-rw" alt="UVSE Cover">
   </a>
 <br>
 
