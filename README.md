@@ -14,11 +14,10 @@
 <p align="center">Countering clickbait using auto scene-detection, splitting, tagging and much more!</p>
 
 <h2> 🎥 Demo Video</h2>
-  <a href="https://drive.google.com/file/d/1t1KMUg89NzQJtyV-EBkbz41vYb5vNiZo/view?usp=sharing" target="_blank">
-  </a>
-<br>
+<a href="https://drive.google.com/file/d/1t1KMUg89NzQJtyV-EBkbz41vYb5vNiZo/view?usp=sharing" target="_blank">Demo!</a>
+</br>
+<a href="https://drive.google.com/file/d/1kFkDAg0qTb0_XxrpJ3vIeVy_6o4IJCGY/view?usp=sharing" target="_blank">Input video used in demo</a>
 
-- [Input video used in demo](https://drive.google.com/file/d/1kFkDAg0qTb0_XxrpJ3vIeVy_6o4IJCGY/view?usp=sharing)
 
 ## 📦 Technologies Used
 
